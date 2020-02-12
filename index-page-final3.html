@@ -1,0 +1,156 @@
+<html>
+<head>
+<title>Be Healthy</title>
+<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+<link rel="stylesheet" type="text/css" href="style2.css">
+<link rel="stylesheet" type="text/css" href="style3.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" >
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <style>
+    .sub-button{
+          color:white;
+          background-color: rgb(17, 204, 48);
+    }
+    ul{
+        text-decoration: none;
+        list-style-type: none;
+        overflow: hidden;          
+        background-color: black;
+    }
+    input ::-webkit-inner-spin-button,::-webkit-outer-spin-button{
+        -webkit-appearance: none;
+        margin: 0;
+    }
+     ul li{
+         
+        display: block;
+        color:white;
+        float:right;
+        padding: 10px;
+    }
+    ul li a{
+        padding: 10px;
+        color: white;
+        text-decoration: none;
+
+    }
+    ul li:hover{
+        background-color: white;
+        color:black;
+    }
+    ul li a:hover{
+      text-decoration: none;
+      color:black;
+    }
+  
+</style>
+</head>
+<body onload="load3()">
+  <main class="cww">
+      <div>
+        <img  class="rounded-circle logo" src="a.png">
+        <p style="color: black; float: right;">"Fitness Comes First"</p>
+      </div>
+      <div class="dropdwn">
+        <nav>
+
+        <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index-page-final-2.html">Place Appointmnt</a></li>
+        <li><a href="index-page-final3.html">View Appointment</a></li>
+      
+        <ul>
+
+        <ul>
+        <li><a href="work.html">Works</a></li>
+        <li><a href="status.html">Status</a></li>
+        </ul>
+        </li>
+        </ul>
+        </li>
+        
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+      </div> 
+      <div class="row">
+          <div class="col-lg-2">
+            <div style=" position: fixed; left: 0;width: 250px; height: 100%; ">
+              <ul>
+                <li><a href="about.html" style="color: antiquewhite;"><i class="far fa-question-circle" style="line-height: 65px;font-size: 20px;color: white;padding-left: 40px;"></i>About</a></li>
+                <li><a href="overview.html" style="color: antiquewhite;"><i class="fas fa-stream" style="line-height: 65px;font-size: 20px;color: white;padding-left: 40px;"></i>Overview</a></li>
+                <li><a href="event.html" style="color: antiquewhite;"><i class="fas fa-calendar-week" style="line-height: 65px;font-size: 20px;color: white;padding-left: 40px;"></i>Events</a></li>
+                <li><a href="service.html" style="color: antiquewhite;"><i class="fas fa-sliders-h" style="line-height: 65px;font-size: 20px;color: white;padding-left: 40px;"></i>Service</a></li>
+                <li style="color: antiquewhite;"><a href="gallery.html" style="color: antiquewhite;"><i class="far fa-envelope" style="line-height: 65px;font-size: 20px;color: white;padding-left: 40px;"></i>Gallery</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-10">
+              <div class="jumbotron" style="background-color: rgb(211, 198, 198,0.5);">
+                
+                
+                   
+    <div>
+        <h1>
+            view appointments of the trainer
+        </h1>
+        <table border="2px">
+            <tr>
+                <th> NAME</th>
+                <th>AGE</th>
+                <th>EMAIL</th>
+                <th>CONTACT NUMBER</th>
+                <th>MONDAY APPOINTMENT</th>
+                <th>TUESDAY APPOINTMENT</th>
+                <th>WEDDAY APPOINTMENT</th>
+                <th>THURSDAY APPOINTMENT</th>
+                <th>FRIDAY APPOINTMENT</th>
+                <th>SATURDAY APPOINTMENT</th>
+                <th>SUNDAY APPOINTMENT</th>
+                
+                
+            </tr>
+            <tr>
+                <td id="pd1"></td>
+                <td id="pdage"></td>
+                <td id="pdemail"></td>
+                <td id="pdcontact"></td>
+                <td id="pdappointmo"></td>
+                <td id="pdappointtu"></td>
+                <td id="pdappointwe"></td>
+                <td id="pdappointth"></td>
+                <td id="pdappointfr"></td>
+                <td id="pdappointsa"></td>
+                <td id="pdappointsu"></td>
+            </tr>
+        </table>
+    </div>
+        </div>
+                
+      </div>
+      </nav>
+  </main>
+  <script>
+        
+    function load3(){
+        document.getElementById("pd1").innerHTML=localStorage.getItem("fname")+" "+localStorage.getItem("lname");
+        document.getElementById("pdage").innerHTML=localStorage.getItem("age");
+        document.getElementById("pdemail").innerHTML=localStorage.getItem("email");
+        document.getElementById("pdcontact").innerHTML=localStorage.getItem("contact");
+        document.getElementById("pdappointmo").innerHTML=localStorage.getItem("appointmon");
+        document.getElementById("pdappointtu").innerHTML=localStorage.getItem("appointtue");
+        document.getElementById("pdappointwe").innerHTML=localStorage.getItem("appointwed");
+        document.getElementById("pdappointth").innerHTML=localStorage.getItem("appointthur");
+        document.getElementById("pdappointfr").innerHTML=localStorage.getItem("appointfri");
+        document.getElementById("pdappointsa").innerHTML=localStorage.getItem("appointsat");
+        document.getElementById("pdappointsu").innerHTML=localStorage.getItem("appointsun");
+    }
+</script>
+
+</body>
+</html>
